@@ -1,0 +1,336 @@
+/**************************atributos de clase*************************************/
+/* **************************** selectores avanzados************************************** */
+/************************selectores de atributo******************************/
+/*****************************SELECTORES UNIVERSALES*******************/
+/****************************** PSEUDOCLASES***************************** */
+/* **********************************PSEUDOELEMENTOS************************** */
+
+h1 {
+  text-align: center;
+  background-color: rgb(34, 151, 136);
+  height: 35px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h2 {
+  color: red;
+  font-family: arial;
+  font-size: em;
+}
+
+a {
+  text-decoration: none;
+}
+
+#parrafo-uno {
+  color: midnightblue;
+}
+
+/**************************ATRIBUTOS DE CLASE*************************************/
+.text-32 {
+  font-size: 20px;
+}
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-steelblue {
+  background-color: steelblue;
+}
+
+.text-white {
+  color: white;
+}
+
+/* *****************************SELECTOES AVANZADOS****************** */
+.hijos_directos > li {
+  background-color: thistle;
+}
+
+.hijos_descendientes b {
+  background-color: thistle;
+}
+
+/* Los selectores de hermanos van a aplicar a los elementos de hermanos q son hermanos y q estan por debajo del elemento de referencia */
+.hermanos_general ~ li {
+  background-color: thistle;
+}
+
+/* se coloca al siguiente hermano que este por debajo de el */
+.hermanos_adyacentes + li {
+  background-color: thistle;
+}
+
+/************************SELECTORES DE ATRIBUTO******************************/
+/* Se coloca href para identificar en donde se a a colocar */
+.selectores-atributos a[href] {
+  color: orangered;
+}
+
+/* Al tener el atributo target en el link se coloca la propiedad */
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+
+/*EL comodin del * aplica el estilo si contiene la palabra en cuestion en cualquier parte*/
+.selectores-atributos a[href*="links"] {
+  font-size: 24px;
+}
+
+/* El Comodin ^ aplica los estilos cuando empieze al inicio puede ser texto, letras, numeros */
+.selectores-atributos a[href^="http"] {
+  text-decoration: line-through;
+}
+
+/* El Comodin $ aplica los estilos cuando empieze al inicio puede ser texto, letras, numeros */
+.selectores-atributos a[href$=".com"] {
+  background-color: rgb(0, 0, 0);
+}
+
+/* El comodin ~ de la tilde aplica el estilo si contiene el texto en cuestion en un a lista de espacios */
+.selectores-atributos a[class~="cursos"] {
+  background-color: steelblue;
+}
+
+/* El comodin | de la tilde aplica el estilo si contiene el texto en cuestion en un a lista de espacios y que despues 
+venga con un - */
+.selectores-atributos a[class|="menu"] {
+  font-style: italic;
+}
+
+/*****************************SELECTORES UNIVERSALES*******************/
+* {
+  font-family: sans-serif;
+}
+
+/* se afecta a todos los elemtos que esten detro de la clase ul o div o li */
+.selector-universal * {
+  font-size: 24px;
+}
+
+/***************** PSEUDOCLASES***************************** 
+Dan estilos del contexto, posición o estado del elemento
+*/
+
+/* Coloca color al borde de todos los elementos q contengan required */
+.form_pseudoclase *:required {
+  border-color: rgb(251, 255, 8);
+}
+
+/* Al tener todos los elementos valios se coloca el color verde */
+.form_pseudoclase *:valid {
+  border-color: rgb(2, 0, 128);
+}
+
+/* Al ser invalido coloca el color verde */
+.form_pseudoclase *:invalid {
+  border-color: green;
+}
+
+/* Al dar click se coloca el color skyleblue de fondo */
+.form_pseudoclase *:focus {
+  background-color: skyblue;
+}
+
+/* Al estar desavilitado se coloca el color de fondo */
+.form_pseudoclase *:disabled {
+  background-color: rgb(128, 0, 107);
+}
+
+/* Al ser visitado el link cambia de color despues 
+se coloca primero para que cuando pase el mause no afecte a hover y pueda cambiar de color
+*/
+.menu-pseudoclases a:visited {
+  color: rgb(0, 255, 255);
+}
+
+/* Al pasar el mause por encima cambia de color */
+.menu-pseudoclases a:hover {
+  color: orange;
+}
+
+/* Al pasar el mouse se agranda la letra */
+.p-pseudoclases:hover {
+  font-size: 20px;
+}
+
+/* Al dar click y aparecer #inicio en la barra de busqueda se coloca el color verde de fondo */
+#temario-css:target {
+  background-color: limegreen;
+}
+
+/* esta aplica al primer elemento padre y que tenga li */
+.lista-pseudoclases li:first-child {
+  color: green;
+}
+
+/* Aplica color al ultimo elemento */
+.lista-pseudoclases li:last-child {
+  color: blueviolet;
+}
+
+/* Aplica color al elemento q se especifique el numero de la lista */
+.lista-pseudoclases li:nth-child(3) {
+  color: navy;
+}
+
+/* colocar colores de 4 en 4 */
+.lista-pseudoclases li:nth-child(4n) {
+  font-size: 20px;
+}
+
+/* bold colocar la letra en negrilla */
+.lista-pseudoclases li:nth-child(3n + 1) {
+  font-weight: bold;
+}
+
+/* colocar el fondo de color amarillo a los elementos pares */
+.lista-pseudoclases li:nth-child(even) {
+  background-color: yellow;
+}
+
+/* Colocar el color anarjado a todos los elementos imapares */
+.lista-pseudoclases li:nth-child(odd) {
+  background-color: rgb(243, 163, 14);
+}
+
+/* coloca el color pink en el primero en su tipo en el parrafo */
+.articulo-pseudoclases p:first-of-type {
+  background-color: pink;
+}
+
+/* Coloca el color violeta al ultimo en su tipo del parrafo */
+.articulo-pseudoclases p:last-of-type {
+  background-color: rgb(220, 32, 226);
+}
+
+/* Colocar el color al 3 de su tipo */
+.articulo-pseudoclases p:nth-of-type(3) {
+  background-color: rgb(247, 19, 19);
+}
+
+/* Coloca el color de fondo azul a todos pero define que a los q son p no los afecte */
+.articulo-pseudoclases *:not(p, button, lista, #uno) {
+  background-color: rgb(41, 27, 233);
+}
+
+/* tambien se descartan a las otras que esten separadas por coma */
+.articulo-pseudoclases *:not(p, button, lista, #uno) {
+  background-color: rgb(41, 27, 233);
+}
+
+/* **********************************PSEUDOELEMENTOS************************** */
+/* Dan estilos a partes en especificas de un elemento, se usan :: para diferenciarlos
+de las pseudoclases */
+
+/* Coloca el emoji antes de deonde se especifica la clase */
+.saga-dragonball::before {
+  content: "🤼‍♂️";
+}
+
+/* Coloca el contenido despues de donde se especifica la clase */
+.saga-dragonball::after {
+  content: "🖐";
+}
+
+.super-sayajin::before {
+  content: " $";
+  font-weight: bold;
+}
+
+.super-sayajin::after {
+  content: " cop";
+  font-weight: bold;
+}
+
+/* Editar la primera letra */
+.p-pseudoelementos::first-letter {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+/* Afecta a la primera linea */
+.p-pseudoelementos::first-line {
+  color: aqua;
+}
+
+/* Al seleccionar los textos cambian de color */
+.p-pseudoelementos::selection {
+  color: greenyellow;
+  background-color: black;
+}
+
+/* Cambia el interiror del texto a color verde */
+.input-pseudoelementos::placeholder {
+  color: green;
+}
+
+/* ****************AGRUPAR SELECTORES******************** */
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea {
+  border-color: yellowgreen;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: black;
+  font-size: 20px;
+  display: block;
+  width: 300px;
+}
+
+/*
+El Algoritmo de CSS: Es la forma en que el navegador aplica los estilos al documento HTML. Es vital entender este concepto para que entiendas como se aplican y en algunas ocasiones se sobreescriben las reglas CSS.
+ 1) La Cascada.
+ 2) La Especificidad.
+ 3) La Herencia.
+La Cascada es el mecanismo en que el navegador aplica los estilos. Y toma en cuenta lo siguiente en este orden:
+ 1) El Origen del Código:
+ - El User Agent (los estilos por defecto del navegador)
+ - Personalizaciones del usuario.
+ - Los estilos del autor.
+ 2) La Especificidad del Selector
+ 3) Orden de Aparición
+La Especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente forma:
+ Etiquetas y pseudoelementos -----------------0,0,0,1
+ Clases, atributos y pseudoclases ------------0,0,1,0
+ Identificadores -----------------------------0,1,0,0
+ Estilos en línea-----------------------------1,0,0,0
+ !important ------------------Rompe la especificidad
+La Herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestión con el valor initial
+https://web.dev/learn/css/inheritance/#which-properties-are-inheritable
+*/
+
+#Cita-goku#Cita-goku.Cita-goku {
+    background-color: lightsteelblue;
+}
+
+blockquote{ 
+    background-color: burlywood;
+}
+
+#Cita-goku {
+    background-color: lightgreen;
+}
+
+/* Se dice que aparte de ser blockcout tambien tiene que tener Cita-goku  */
+blockquote.Cita-goku {
+    background-color: tomato;
+}
+
+.Cita-goku {
+    background-color: cornflowerblue;
+}
+.Cita-goku {
+    background-color: mediumaquamarine !important;
+}
+
+blockquote#Cita-goku {
+    background-color: lightsalmon;
+}
+
+.Cita-goku cite {
+    background-color: brown;
+    background-color: inherit;
+}
+
+
